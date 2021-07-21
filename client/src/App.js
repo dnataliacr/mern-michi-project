@@ -4,6 +4,8 @@ import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 import Posts from "./components/Posts/Posts.js";
 import Form from "./components/Form/Form.js";
 
+import makeStyles from "./styles.js";
+
 const App = () => {
   return (
     <Container maxWidth="lg">
