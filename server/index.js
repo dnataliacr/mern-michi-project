@@ -10,7 +10,7 @@ app.use(express.urlencoded({ limit: "25mb", extended: true }));
 app.use(express.json({ limit: "25mb" }));
 
 const CONNECTION_URL =
-"mongodb+srv://Natalia:ymyrf8Y9_x!Lea9@cluster0.9rjgh.mongodb.net/drags?retryWrites=true&w=majority"
+  "mongodb+srv://Natalia:ymyrf8Y9_x!Lea9@cluster0.9rjgh.mongodb.net/drags?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 8000;
 
@@ -22,3 +22,5 @@ mongoose
     )
   )
   .catch((error) => console.log(`${error} did not connect`));
+
+mongoose.set("useFindAndModify", false);
