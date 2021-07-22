@@ -8,7 +8,7 @@ export default (posts = [], action) => {
 
     case "UPDATE":
       return posts.map((post) =>
-        posts.id == action.payload.id ? action.payload : post
+        posts._id == action.payload._id ? action.payload : post
       );
       break;
 
