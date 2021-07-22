@@ -1,3 +1,6 @@
+.env
+
+
 server/package.json
 server/node_modules
 server/package-lock.json
