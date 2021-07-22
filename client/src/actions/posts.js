@@ -21,8 +21,14 @@ export const createPost = (post) => async (dispatch) => {
   }
 };
 
+export const updatePost = (id, post) => async (dispatch) => {
+  try {
+    const { data } = await updatePost(id, post);
+
+    dispatch({ type: "UPDATE", payload: data });
+  } catch (error) {}
+};
+
 export const deletePost = (post) => async (dispatch) => {};
 
 export const likePost = (post) => async (dispatch) => {};
-
-export const updatePost = (post) => async (dispatch) => {};
