@@ -17,6 +17,12 @@ export const createPost = (post) => async (dispatch) => {
     const { data } = await api.createPost(post);
     dispatch({ type: "CREATE", payload: data });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 };
+
+export const deletePost = (post) => async (dispatch) => {};
+
+export const likePost = (post) => async (dispatch) => {};
+
+export const updatePost = (post) => async (dispatch) => {};
