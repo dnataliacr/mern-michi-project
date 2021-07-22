@@ -20,11 +20,11 @@ const App = () => {
 
   useEffect(() => {
     dispatch(getPosts());
-  }, [dispatch]);
+  }, [currentId, dispatch]);
 
   return (
     <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
+      <AppBar className={classes.appBar} position="static" color="transparent">
         <Typography className={classes.heading} variant="h2" align="center">
           michis michis
         </Typography>
