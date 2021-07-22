@@ -1,7 +1,5 @@
 import React from "react";
-import { Provider } from "react-redux";
-import { createStore, applyMiddleware, compose } from "redux";
-import thunk from "redux-thunk";
+
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 
 import Posts from "./components/Posts/Posts.js";
