@@ -6,5 +6,5 @@ import styles from "./styles";
 const Paginate = () => {
   const classes = useStyles();
 
-  return <Pagination />;
+  return <Pagination classes={{ ul: classes.ul }} />;
 };
