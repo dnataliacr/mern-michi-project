@@ -17,7 +17,7 @@ const Form = ({ currentId, setCurrentId }) => {
   }, [post]);
 
   const clear = () => {
-    setCurrentId(0);
+    setCurrentId(null);
     setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
   };
 
