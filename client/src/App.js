@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { createTheme, ThemeProvider } from "@material-ui/core";
+import { createTheme, ThemeProvider, Toolbar } from "@material-ui/core";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 
 import { useDispatch } from "react-redux";
@@ -27,27 +27,22 @@ const App = () => {
   }, [currentId, dispatch]);
 
   return (
-  
-    <Container maxWidth="lg">
-      <AppBar
-        className={classes.appBar}
-        position="static"
-        color="inherit
-      "
-      >
-        <Typography
-          className={classes.heading}
-          variant="h1"
-          align="center"
-          color="black"
-         
+ <>
+    
+    <AppBar position="static" className={classes.appBar}>
+  <Toolbar variant="dense">
 
-        >
-          michisite
-        </Typography>
-      </AppBar>
+
+
+    <Typography variant="h3" color="inherit" component="div">
+      michisite
+    </Typography>
+  </Toolbar>
+</AppBar>
+    <Container maxWidth="lg">
+  
       <Grow in>
-        <Container>
+     
           <Grid
             container
             justify="space-between"
@@ -63,8 +58,9 @@ const App = () => {
           </Grid>
         </Container>
       </Grow>
+  
     </Container>
-
+  </>
   );
 };
 
