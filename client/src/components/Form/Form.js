@@ -61,7 +61,7 @@ const Form = ({ currentId, setCurrentId }) => {
         </Typography>
         <TextField
           name="creator"
-          variant="outlined"
+          variant="filled"
           label="Creator"
           fullWidth
           value={postData.creator}
@@ -71,7 +71,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name="title"
-          variant="outlined"
+          variant="filled"
           label="Title"
           fullWidth
           value={postData.title}
@@ -79,7 +79,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name="message"
-          variant="outlined"
+          variant="filled"
           label="Message"
           fullWidth
           multiline
@@ -91,7 +91,7 @@ const Form = ({ currentId, setCurrentId }) => {
         />
         <TextField
           name="tags"
-          variant="outlined"
+          variant="filled"
           label="Tags (coma separated)"
           fullWidth
           value={postData.tags}
