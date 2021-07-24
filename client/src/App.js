@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from "react";
+import { createTheme, ThemeProvider } from "@material-ui/core";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+
 import { useDispatch } from "react-redux";
 
 import Posts from "./components/Posts/Posts";
 import Form from "./components/Form/Form";
 import { getPosts } from "./actions/posts";
 import useStyles from "./styles";
+
+const theme = createTheme({
+  typography: {
+    fontFamily: "Zen Loop",
+    fontWeightLight: 400,
+    fontWeightBold: 600,
+  },
+});
 
 const App = () => {
   const [currentId, setCurrentId] = useState(0);
@@ -18,8 +28,12 @@ const App = () => {
 
   return (
     <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit
-      ">
+      <AppBar
+        className={classes.appBar}
+        position="static"
+        color="inherit
+      "
+      >
         <Typography
           className={classes.heading}
           variant="h1"
