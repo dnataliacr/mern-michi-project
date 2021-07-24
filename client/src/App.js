@@ -18,15 +18,21 @@ const App = () => {
 
   return (
     <Container maxWidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">
-          Memories
+      <AppBar className={classes.appBar} position="static" color="inherit
+      ">
+        <Typography
+          className={classes.heading}
+          variant="h1"
+          align="center"
+          color="black"
+          fontFamily="ZenLoop"
+        >
+          michisite
         </Typography>
-
       </AppBar>
       <Grow in>
         <Container>
-      <Grid
+          <Grid
             container
             justify="space-between"
             alignItems="stretch"
