@@ -11,9 +11,9 @@ import useStyles from "./styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Zen Loop",
+    fontFamily: "Quicksand",
     fontWeightLight: 400,
-    fontWeightBold: 600,
+    fontWeightBold: 800,
   },
 });
 
@@ -27,6 +27,7 @@ const App = () => {
   }, [currentId, dispatch]);
 
   return (
+  
     <Container maxWidth="lg">
       <AppBar
         className={classes.appBar}
@@ -39,7 +40,8 @@ const App = () => {
           variant="h1"
           align="center"
           color="black"
-          fontFamily="ZenLoop"
+         
+
         >
           michisite
         </Typography>
@@ -62,6 +64,7 @@ const App = () => {
         </Container>
       </Grow>
     </Container>
+
   );
 };
 
