@@ -49,50 +49,30 @@ const Form = ({ currentId, setCurrentId }) => {
   };
 
   return (
-    <Paper className={classes.paper}>
+    <Paper className={`${classes.paper} ${classes.glass}`}>
       <form
         autoComplete="off"
         noValidate
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h6">
-          {currentId ? `Editing "${post.title}"` : "Creating a Memory"}
+        <Typography variant="h4">
+         michipost
         </Typography>
-        <TextField
-          name="creator"
-          variant="filled"
-          label="Creator"
-          fullWidth
-          value={postData.creator}
-          onChange={(e) =>
-            setPostData({ ...postData, creator: e.target.value })
-          }
-        />
+  
         <TextField
           name="title"
           variant="filled"
-          label="Title"
+          label="title"
           fullWidth
           value={postData.title}
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
-        <TextField
-          name="message"
-          variant="filled"
-          label="Message"
-          fullWidth
-          multiline
-          rows={4}
-          value={postData.message}
-          onChange={(e) =>
-            setPostData({ ...postData, message: e.target.value })
-          }
-        />
+ 
         <TextField
           name="tags"
           variant="filled"
-          label="Tags (coma separated)"
+          label="tags"
           fullWidth
           value={postData.tags}
           onChange={(e) =>
@@ -120,11 +100,10 @@ const Form = ({ currentId, setCurrentId }) => {
           Submit
         </Button>
         
-          {
-            /*<Button variant="contained" size="small" onClick={clear} fullWidth>
+          <Button variant="contained" size="small" onClick={clear} fullWidth>
           Clear
-          </Button>*/
-          }
+          </Button>
+  
         
       </form>
     </Paper>
