@@ -24,17 +24,24 @@ const App = () => {
   useEffect(() => {
     dispatch(getPosts());
   }, [currentId, dispatch]);
-  const posts = useSelector((state) => state.posts);
+
+
+  const theme = createTheme({
+  
+    typography: {
+      fontFamily: "Abril Fatface",
+    },
+  });
   return (
-    <>
-      <AppBar className={classes.appBar} position="static" color="transparent">
+    <ThemeProvider theme={theme}>
+      <AppBar className={classes.appBar} position="static" >
         <Typography
           className={classes.heading}
           variant="h2"
           align="center"
-          color="black"
+         
         >
-          michipost
+          michisite
         </Typography>
       </AppBar>
       <Container maxWidth="lg">
@@ -42,12 +49,12 @@ const App = () => {
           <Container>
             <Grid
               container
-              justify="space-around"
+              justifyContent="space-between"
               alignItems="stretch"
               spacing={3}
             >
               <Grid item xs={12} sm={9}>
-            <Posts setCurrentId={setCurrentId} /> 
+                <Posts setCurrentId={setCurrentId} />
               </Grid>
               <Grid item xs={12} sm={3}>
                 <Form currentId={currentId} setCurrentId={setCurrentId} />
@@ -56,7 +63,8 @@ const App = () => {
           </Container>
         </Grow>
       </Container>
-    </>
+      </ThemeProvider>
+
   );
 };
 
