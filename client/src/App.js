@@ -15,7 +15,7 @@ import Form from "./components/Form/Form";
 import { getPosts } from "./actions/posts";
 import useStyles from "./styles";
 
-import { useSelector } from "react-redux";
+
 const App = () => {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
