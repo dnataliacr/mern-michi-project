@@ -1,10 +1,11 @@
 .env
 
 
-server/package.json
+
 server/node_modules
 server/package-lock.json
 
 client/package.json
 client/node_modules
 client/package-lock.json
+*.png
