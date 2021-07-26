@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-export default makeStyles((theme) => ({
+export default makeStyles((themey
+  ) => ({
   appBar: {
     margin: "0 0 100px 0",
 
