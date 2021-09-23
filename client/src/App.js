@@ -34,7 +34,7 @@ const App = () => {
   });
   return (
     <ThemeProvider theme={theme}>
-      <AppBar className={classes.appBar} position="static" >
+      <AppBar className={classes.appBar} position="static" justifyContent="left">
         <Typography
           className={classes.heading}
           variant="h2"
