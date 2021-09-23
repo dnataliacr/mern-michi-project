@@ -71,7 +71,7 @@ const App = () => {
             fontSize="small"
           />{" "}
           by{" "}
-          <a href="wwww.nataliacabral.com" className={classes.anchor}>
+          <a href="https://nataliacabral.com/" rel="noreferrer" className={classes.anchor}>
             nataliacabral.com
           </a>
         </Typography>
