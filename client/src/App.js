@@ -57,7 +57,7 @@ const App = () => {
               <Grid item xs={12} sm={9}>
                 <Posts setCurrentId={setCurrentId} />
               </Grid>
-              <Grid item xs={12} sm={3}>
+              <Grid item xs={12} sm={9} md={3}>
                 <Form currentId={currentId} setCurrentId={setCurrentId} />
               </Grid>
             </Grid>
