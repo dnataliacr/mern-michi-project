@@ -26,7 +26,6 @@ const App = () => {
   }, [currentId, dispatch]);
 
 
-  
   const theme = createTheme({
   
     typography: {
