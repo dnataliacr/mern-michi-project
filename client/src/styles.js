@@ -31,7 +31,7 @@ export default makeStyles((theme) => ({
     animation: "beat 2s infinite",
   },
   icon: {
-    animation: `$beat 2s infinite`,
+    animation: `$beat 3s infinite`,
   },
   '@keyframes beat': {
     "0%": {
@@ -48,6 +48,7 @@ export default makeStyles((theme) => ({
   [theme.breakpoints.down("sm")]: {
     mainContainer: {
       flexDirection: "column-reverse",
+      alignItems: "center"
     },
   },
 }));
