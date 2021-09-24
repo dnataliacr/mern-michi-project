@@ -1,2 +1,2 @@
 ## Michisite
-hchmhv,jhvjchgc mnbj gjkuk
+hchmhv,jhvjchgc mnbj
