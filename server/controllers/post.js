@@ -62,7 +62,26 @@ export const updatePost = async (req, res) => {
 };
 
 
+export const deletePost = async (req, res) => {
+  const { id } = req.params;
 
+  try {
+    const post = await PostMessage.findById(id);
 
+    res.status(200).json(post);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
+
+export const likePost = (id) => async (dispatch) => {
+  try {
+    const { data } = await api.likePost(id);
+
+    dispatch({ type: LIKE, payload: data });
+  } catch (error) {
+    console.log(error.message);
+  }
+};
 
 export default router;
