@@ -15,6 +15,7 @@ const Form = ({ currentId, setCurrentId }) => {
     tags: "",
     selectedFile: "",
   });
+  const [error, setError] = useState(false);
   const post = useSelector((state) =>
     currentId ? state.posts.find((message) => message._id === currentId) : null
   );
@@ -38,13 +39,18 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (currentId === 0) {
-      dispatch(createPost(postData));
-      clear();
-    } else {
-      dispatch(updatePost(currentId, postData));
-      clear();
+    console.log(postData);
+    if (postData.selectedFile === "") {
+      setError(true);
+    } else if (postData.selectedFile !== "") {
+      setError(false);
+      if (currentId === 0) {
+        dispatch(createPost(postData));
+        clear();
+      } else {
+        dispatch(updatePost(currentId, postData));
+        clear();
+      }
     }
   };
 
@@ -56,10 +62,8 @@ const Form = ({ currentId, setCurrentId }) => {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
-        <Typography variant="h4">
-         michipost
-        </Typography>
-  
+        <Typography variant="h4">michipost</Typography>
+
         <TextField
           name="title"
           variant="filled"
@@ -68,7 +72,7 @@ const Form = ({ currentId, setCurrentId }) => {
           value={postData.title}
           onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
- 
+
         <TextField
           name="tags"
           variant="filled"
@@ -88,6 +92,10 @@ const Form = ({ currentId, setCurrentId }) => {
             }
           />
         </div>
+        <div className={`${error ? classes.error : classes.hidden}`}>
+          {" "}
+          <span>You must include a michiphoto</span>{" "}
+        </div>
         <Button
           className={classes.buttonSubmit}
           variant="contained"
@@ -99,12 +107,10 @@ const Form = ({ currentId, setCurrentId }) => {
           {" "}
           Submit
         </Button>
-        
-          <Button variant="contained" size="small" onClick={clear} fullWidth>
+
+        <Button variant="contained" size="small" onClick={clear} fullWidth>
           Clear
-          </Button>
-  
-        
+        </Button>
       </form>
     </Paper>
   );
